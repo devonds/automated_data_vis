@@ -11,9 +11,9 @@ In this consulting project, the aim is to build a model that takes tabular data 
 ### Approach
 Data2Vis ([github](https://github.com/victordibia/data2vis), [paper](https://arxiv.org/abs/1804.03126)) provides a precident for automatically translating tabular data into visualizations. I intend to modify Data2Vis for this purpose, specifically, to understand and generate visualizations of genomic data as well as other tabular data.  
 
-Data2Vis in turn implements [seq2seq](https://github.com/google/seq2seq), a general model for translating a sequence of one thing to a sequence of another thing. It is a recurrent neural network, and the cannonical application is language translation. It runs on TensorFlow. 
+Data2Vis in turn implements [seq2seq](https://github.com/google/seq2seq), a general model for translating a sequence of one thing to a sequence of another thing. It is a recurrent neural network, and the cannonical application is language translation. It runs on TensorFlow.
 
-Here is the model architecture, lifted from the data2vis github page: 
+In the case of data2vis, the input is tabular data and the output are attributes of a chart: the most important data fields, the type of chart, data transformations and scales, colors, labels, etc.  Those chart attributes are then translated into a visualization grammer, like seaborn, ggplot2, D3, etc. Here is the model architecture, lifted from the data2vis github page: 
 
 ![data2vis architecture](https://github.com/victordibia/data2vis/blob/master/static/assets/datatransform.jpg?raw=true)
 
