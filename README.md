@@ -1,4 +1,4 @@
-# Automated Data Visualization
+# Automated Data Visualization for COVID patient and virus data
 ## Automatically translate tabular data on patients and virus strains into graphs and charts for clinicians treating COVID-19 patients
 
 ### Need
@@ -17,8 +17,14 @@ In the case of data2vis, the input is tabular data and the output are attributes
 
 ![data2vis architecture](https://github.com/victordibia/data2vis/blob/master/static/assets/datatransform.jpg?raw=true)
 
+I've run into some difficulty so far in getting data2vis to run -- it requires old versions of TensorFlow, Python, and more, and setting up a compatible environment is tedious. Also, using more recent software will be more useful for the client. Finally, the old versions prohibit using google colab.
+Right now, we're leaning towards building an LSTM model from scratch and training it on the same data sources as Data2Vis. 
+
 ### Outcome
-The minimum viable product for this purpose needs to be capable of generating 6 different kinds of charts from diverse data inputs. I'd like to adapt data2vis to "understand" genomic data and output charts that are particularly useful for medical teams treating COVID patients. 
+We're trying for a working model capable of generating 6 different kinds of charts from diverse data inputs. 
+A *minimum viable product* (1) identifies chart type and (2) selects features to chart. 
+Client has requested that I focus on getting a model working and not on putting it into production. 
+However, I'll want to make a compelling demo.  The data is private patient data and under NDA but I have written permission to share both the trained model and source code.
 
 ### Steps and things to try
 - fork data2vis and get it working on example data, and some of my past research data
